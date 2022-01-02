@@ -1,0 +1,18 @@
+{% extends 'navbar.html' %}
+{% load crispy_forms_tags %}
+{% block title_block %}
+{{title}}
+{% endblock title_block %}
+
+
+{% block body_block %}
+
+<form method="POST" entype=>
+
+    {{ form|crispy }}
+    {% csrf_token %}
+    <button type="submit" class="btn btn-primary" style="width:100%">Login</button>
+
+</form>
+
+{% endblock body_block %}

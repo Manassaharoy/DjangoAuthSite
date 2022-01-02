@@ -1,0 +1,17 @@
+{% extends 'navbar.html' %}
+{% block title_block %}
+{{title}}
+{% endblock title_block %}
+
+
+{% block body_block %}
+
+<div class="jumbotron">
+    <h1 class="display-4">Hello, {{user.username}}</h1>
+    <p class="lead">This is a authentication site.</p>
+    <hr class="my-4">
+    <p>Thank you for logging in and testing this site. Visit again.</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'App_login:logout' %}" role="button">Log out</a>
+</div>
+
+{% endblock body_block %}
